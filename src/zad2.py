@@ -15,3 +15,5 @@ class RomanNumerals:
             return self.base[1]
         elif num == 2:
             return self.base[1]+self.base[1]
+        elif num == 3:
+            return self.base[1]+self.base[1]+self.base[1]
