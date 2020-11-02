@@ -24,14 +24,5 @@ class TheTwelveDaysOfChristmas:
         return self.lyrics.split('.')[line - 1] + '.'
 
     def showLinesFromTo(self, start, end):
-        if start == 2 and end == 6:
-            return [self.lyrics.split('.')[i] + '.\n' for i in range(len(self.lyrics.split('.'))) if 1 <= i <= 5]
-        elif start == 4 and end == 4:
-            return [self.lyrics.split('.')[i] + '.\n' for i in range(len(self.lyrics.split('.'))) if 3 <= i <= 3]
-        elif start == 5 and end == 9:
-            return [self.lyrics.split('.')[i] + '.\n' for i in range(len(self.lyrics.split('.'))) if 4 <= i <= 8]
-        elif start == 1 and end == 12:
-            return [self.lyrics.split('.')[i] + '.\n' for i in range(len(self.lyrics.split('.'))) if 0 <= i <= 11]
-        elif start == 7 and end == 8:
-            return [self.lyrics.split('.')[i] + '.\n' for i in range(len(self.lyrics.split('.'))) if 6 <= i <= 7]
+        return [self.lyrics.split('.')[i] + '.\n' for i in range(len(self.lyrics.split('.'))) if start - 1 <= i <= end - 1]
 
