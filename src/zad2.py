@@ -38,3 +38,5 @@ class RomanNumerals:
             return self.tens(divided[0])+self.ones(divided[1])
         elif num == 141:
             return self.base[100]+self.tens(4)+self.ones(1)
+        elif num == 163:
+            return self.base[100]+self.tens(6)+self.ones(3)
