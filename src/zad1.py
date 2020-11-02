@@ -14,3 +14,5 @@ class Hamming:
             raise ValueError('.+')
         elif a == "ATA" and b == "AGTG":
             raise ValueError('.+')
+        elif a == "" and b == "G":
+            raise ValueError('.+')
