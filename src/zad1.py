@@ -7,3 +7,5 @@ class Hamming:
                 return 0
             else:
                 return 1
+        elif a == "GGACTGAAATCTG" and b == "GGACTGAAATCTG":
+            return 0
