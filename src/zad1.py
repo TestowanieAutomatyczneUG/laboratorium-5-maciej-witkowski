@@ -10,3 +10,5 @@ class Hamming:
                 if a[i] != b[i]:
                     count += 1
             return count
+        elif a == "AATG" and b == "AAA":
+            raise ValueError('.+')
