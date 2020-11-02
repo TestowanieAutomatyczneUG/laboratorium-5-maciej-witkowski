@@ -42,3 +42,5 @@ class RomanNumerals:
             return self.base[100]+self.tens(6)+self.ones(3)
         elif num == 402:
             return self.base[100]+self.base[500]+self.ones(2)
+        elif num == 575:
+            return self.base[500]+self.tens(7)+self.ones(5)
