@@ -43,7 +43,6 @@ class TheTwelveDaysOfChristmasTest(unittest.TestCase):
     def testEighthLine(self):
         self.assertEqual(self.song.showOneLine(8), 'On the eighth day of Christmas my true love gave to me: eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.')
 
-    @unittest.skip("not implemented")
     def testNinthLine(self):
         self.assertEqual(self.song.showOneLine(9), 'On the ninth day of Christmas my true love gave to me: nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.')
 
