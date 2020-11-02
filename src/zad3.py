@@ -22,7 +22,10 @@ class TheTwelveDaysOfChristmas:
 
     def showOneLine(self, line):
         if isinstance(line, int):
-            return self.lyrics.split('.')[line - 1] + '.'
+            if line > 12:
+                raise ValueError('.+')
+            else:
+                return self.lyrics.split('.')[line - 1] + '.'
         else:
             raise ValueError('.+')
 
