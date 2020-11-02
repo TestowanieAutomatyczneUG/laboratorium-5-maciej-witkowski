@@ -25,7 +25,6 @@ class TheTwelveDaysOfChristmasTest(unittest.TestCase):
     def testSecondLine(self):
         self.assertEqual(self.song.showOneLine(2), 'On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.')
 
-    @unittest.skip("not implemented")
     def testThirdLine(self):
         self.assertEqual(self.song.showOneLine(3), 'On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.')
 
