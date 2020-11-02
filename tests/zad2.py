@@ -3,7 +3,6 @@ from src.zad2 import RomanNumerals
 
 
 class RomanNumeralsTest(unittest.TestCase):
-    @unittest.skip("not implemented")
     def test_1_is_a_single_i(self):
         self.assertEqual(self.romanNumerals.roman(1), "I")
 
