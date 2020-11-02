@@ -1,3 +1,4 @@
 class Hamming:
     def distance(self, a, b):
-        return ""
+        if a == "" or b == "":
+            return 0
