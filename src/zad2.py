@@ -10,7 +10,7 @@ class RomanNumerals:
             1000: 'M'
         }
 
-    def partOfDecimals(self, partOfNum):
+    def ones(self, partOfNum):
         if 1 <= partOfNum <= 3:
             return self.base[1]*partOfNum
         elif partOfNum == 4:
@@ -20,17 +20,19 @@ class RomanNumerals:
         elif partOfNum == 9:
             return self.base[1]+self.base[10]
 
-    def roman(self, num):
-        if num < 10:
-            return self.partOfDecimals(num)
-        elif num == 27:
-            return self.base[10] + self.base[10] + self.partOfDecimals(7)
-        elif num == 48:
-            return self.base[10]+self.base[50]+self.partOfDecimals(8)
-        elif num == 49:
-            return self.base[10] + self.base[50] + self.partOfDecimals(9)
-        elif num == 59:
-            return self.base[50]+self.partOfDecimals(9)
-        elif num == 93:
-            return self.base[10]+self.base[100]+self.partOfDecimals(3)
+    def tens(self, partOfNum):
+        if 1 <= partOfNum <= 3:
+            return self.base[10]*partOfNum
+        elif partOfNum == 4:
+            return self.base[10]+self.base[50]
+        elif 5 <= partOfNum <= 8:
+            return self.base[50]+((partOfNum - 5)*self.base[10])
+        elif partOfNum == 9:
+            return self.base[10]+self.base[100]
 
+    def roman(self, num):
+        divided = [int(i) for i in str(num)]
+        if num < 10:
+            return self.ones(divided[0])
+        elif num < 100:
+            return self.tens(divided[0])+self.ones(divided[1])
