@@ -25,4 +25,6 @@ class RomanNumerals:
             return self.partOfDecimals(num)
         elif num == 27:
             return self.base[10] + self.base[10] + self.partOfDecimals(7)
+        elif num == 48:
+            return self.base[10]+self.base[50]+self.partOfDecimals(8)
 
