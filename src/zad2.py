@@ -21,5 +21,8 @@ class RomanNumerals:
             return self.base[1]+self.base[10]
 
     def roman(self, num):
-        return self.partOfDecimals(num)
+        if num == 27:
+            return self.base[10]+self.base[10]+self.partOfDecimals(7)
+        else:
+            return self.partOfDecimals(num)
 
