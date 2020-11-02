@@ -25,7 +25,10 @@ class TheTwelveDaysOfChristmas:
             if line > 12:
                 raise ValueError('.+')
             else:
-                return self.lyrics.split('.')[line - 1] + '.'
+                if line < 1:
+                    raise ValueError('.+')
+                else:
+                    return self.lyrics.split('.')[line - 1] + '.'
         else:
             raise ValueError('.+')
 
