@@ -18,7 +18,6 @@ class RomanNumeralsTest(unittest.TestCase):
     def test_5_is_a_single_v(self):
         self.assertEqual(self.romanNumerals.roman(5), "V")
 
-    @unittest.skip("not implemented")
     def test_6_being_5_1_is_vi(self):
         self.assertEqual(self.romanNumerals.roman(6), "VI")
 
