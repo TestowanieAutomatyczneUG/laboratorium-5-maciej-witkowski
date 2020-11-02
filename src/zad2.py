@@ -31,4 +31,6 @@ class RomanNumerals:
             return self.base[10] + self.base[50] + self.partOfDecimals(9)
         elif num == 59:
             return self.base[50]+self.partOfDecimals(9)
+        elif num == 93:
+            return self.base[10]+self.base[100]+self.partOfDecimals(3)
 
