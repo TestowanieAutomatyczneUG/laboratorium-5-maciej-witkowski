@@ -19,7 +19,6 @@ class TheTwelveDaysOfChristmasTest(unittest.TestCase):
             'On the twelfth day of Christmas my true love gave to me: twelve Drummers Drumming, eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.\n'
         ])
 
-    @unittest.skip("not implemented")
     def testFirstLine(self):
         self.assertEqual(self.song.showOneLine(1), 'On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.')
 
