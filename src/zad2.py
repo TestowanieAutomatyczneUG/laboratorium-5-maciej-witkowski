@@ -54,4 +54,6 @@ class RomanNumerals:
             return self.tens(divided[0])+self.ones(divided[1])
         elif num < 1000:
             return self.hundreds(divided[0])+self.tens(divided[1])+self.ones(divided[2])
+        elif num == 1024:
+            return self.base[1000]+self.hundreds(0)+self.tens(2)+self.ones(4)
 
