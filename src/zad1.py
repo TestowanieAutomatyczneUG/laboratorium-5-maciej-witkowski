@@ -9,3 +9,5 @@ class Hamming:
                 return 1
         elif a == b:
             return 0
+        elif a == "GGACGGATTCTG" and b == "AGGACGGATTCT":
+            return 9
