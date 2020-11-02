@@ -10,19 +10,16 @@ class RomanNumerals:
             1000: 'M'
         }
 
-    def roman(self, num):
-        if num == 1:
-            return self.base[1]
-        elif num == 2:
-            return self.base[1]+self.base[1]
-        elif num == 3:
-            return self.base[1]+self.base[1]+self.base[1]
-        elif num == 4:
+    def partOfDecimals(self, partOfNum):
+        if 1 <= partOfNum <= 3:
+            return self.base[1]*partOfNum
+        elif partOfNum == 4:
             return self.base[1]+self.base[5]
-        elif num == 5:
-            return self.base[5]
-        elif num == 6:
-            return self.base[5]+self.base[1]
-        elif num == 9:
+        elif 5 <= partOfNum <= 8:
+            return self.base[5]+((partOfNum - 5)*self.base[1])
+        elif partOfNum == 9:
             return self.base[1]+self.base[10]
+
+    def roman(self, num):
+        return self.partOfDecimals(num)
 
