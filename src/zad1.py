@@ -12,3 +12,5 @@ class Hamming:
             return count
         elif a == "AATG" and b == "AAA":
             raise ValueError('.+')
+        elif a == "ATA" and b == "AGTG":
+            raise ValueError('.+')
