@@ -3,8 +3,6 @@ from src.zad1 import Hamming
 
 
 class HammingTest(unittest.TestCase):
-
-    @unittest.skip("not implemented")
     def test_empty_strands(self):
         self.assertEqual(self.hamming.distance("", ""), 0)
 
