@@ -116,7 +116,6 @@ class TheTwelveDaysOfChristmasTest(unittest.TestCase):
         with self.assertRaisesWithMessage(ValueError):
             self.song.showLinesFromTo("", 9)
 
-    @unittest.skip("not implemented")
     def testSecondLineNotInt(self):
         with self.assertRaisesWithMessage(ValueError):
             self.song.showLinesFromTo(10, "11")
