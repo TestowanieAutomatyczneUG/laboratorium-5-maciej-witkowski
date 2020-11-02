@@ -1,8 +1,9 @@
 class Hamming:
     def distance(self, a, b):
-        if a == "" or b == "":
+        if a == "" and b == "":
             return 0
-        elif a == "A" and b == "A":
-            return 0
-        elif a == "G" and b == "T":
-            return 1
+        elif len(a) == 1 and len(b) == 1:
+            if a == b:
+                return 0
+            else:
+                return 1
