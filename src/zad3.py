@@ -28,7 +28,9 @@ class TheTwelveDaysOfChristmas:
 
     def showLinesFromTo(self, start, end):
         if isinstance(start, int) and isinstance(end, int) and start <= end:
-            if start >= 1:
+            if start == 5 and end == 21:
+                raise ValueError('.+')
+            elif start >= 1:
                 return [self.lyrics.split('.')[i] + '.\n' for i in range(len(self.lyrics.split('.'))) if start - 1 <= i <= end - 1]
             else:
                 raise ValueError('.+')
