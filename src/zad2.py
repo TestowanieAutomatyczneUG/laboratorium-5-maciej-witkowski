@@ -10,53 +10,22 @@ class RomanNumerals:
             1000: 'M'
         }
 
-    def ones(self, partOfNum):
-        if 1 <= partOfNum <= 3:
-            return self.base[1]*partOfNum
-        elif partOfNum == 4:
-            return self.base[1]+self.base[5]
-        elif 5 <= partOfNum <= 8:
-            return self.base[5]+((partOfNum - 5)*self.base[1])
-        elif partOfNum == 9:
-            return self.base[1]+self.base[10]
-        else:
-            return ""
-
-    def tens(self, partOfNum):
-        if 1 <= partOfNum <= 3:
-            return self.base[10]*partOfNum
-        elif partOfNum == 4:
-            return self.base[10]+self.base[50]
-        elif 5 <= partOfNum <= 8:
-            return self.base[50]+((partOfNum - 5)*self.base[10])
-        elif partOfNum == 9:
-            return self.base[10]+self.base[100]
-        else:
-            return ""
-
-    def hundreds(self, partOfNum):
-        if 1 <= partOfNum <= 3:
-            return self.base[100] * partOfNum
-        elif partOfNum == 4:
-            return self.base[100] + self.base[500]
-        elif 5 <= partOfNum <= 8:
-            return self.base[500] + ((partOfNum - 5) * self.base[100])
-        elif partOfNum == 9:
-            return self.base[100] + self.base[1000]
-        else:
-            return ""
-
     def roman(self, num):
+        def partOfRoman(numPart, decimalPart):
+            if 1 <= numPart <= 3:
+                return self.base[int('1' + str('0' * decimalPart))] * numPart
+            elif numPart == 4:
+                return self.base[int('1' + str('0' * decimalPart))] + self.base[int('5' + str('0' * decimalPart))]
+            elif 5 <= numPart <= 8:
+                return self.base[int('5' + str('0' * decimalPart))] + (
+                            (numPart - 5) * self.base[int('1' + str('0' * decimalPart))])
+            elif numPart == 9:
+                return self.base[int('1' + str('0' * decimalPart))] + self.base[int('10' + str('0' * decimalPart))]
+            else:
+                return ""
+
         divided = [int(i) for i in str(num)]
-        if num < 10:
-            return self.ones(divided[0])
-        elif num < 100:
-            return self.tens(divided[0])+self.ones(divided[1])
-        elif num < 1000:
-            return self.hundreds(divided[0])+self.tens(divided[1])+self.ones(divided[2])
-        elif num == 1024:
-            return self.base[1000]+self.hundreds(0)+self.tens(2)+self.ones(4)
-        elif num == 3000:
-            return self.base[1000]+self.base[1000]+self.base[1000]+self.hundreds(0)+self.tens(0)+self.ones(0)
-
-
+        result = ""
+        for i in range(len(divided)):
+            result += partOfRoman(divided[i], (len(divided) - i) - 1)
+        return result
