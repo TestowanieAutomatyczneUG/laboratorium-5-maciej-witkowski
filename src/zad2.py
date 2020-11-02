@@ -19,4 +19,6 @@ class RomanNumerals:
             return self.base[1]+self.base[1]+self.base[1]
         elif num == 4:
             return self.base[1]+self.base[5]
+        elif num == 5:
+            return self.base[5]
 
