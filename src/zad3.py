@@ -32,4 +32,6 @@ class TheTwelveDaysOfChristmas:
             return [self.lyrics.split('.')[i] + '.\n' for i in range(len(self.lyrics.split('.'))) if 4 <= i <= 8]
         elif start == 1 and end == 12:
             return [self.lyrics.split('.')[i] + '.\n' for i in range(len(self.lyrics.split('.'))) if 0 <= i <= 11]
+        elif start == 7 and end == 8:
+            return [self.lyrics.split('.')[i] + '.\n' for i in range(len(self.lyrics.split('.'))) if 6 <= i <= 7]
 
