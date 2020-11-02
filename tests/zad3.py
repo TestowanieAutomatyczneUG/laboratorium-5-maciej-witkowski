@@ -128,7 +128,6 @@ class TheTwelveDaysOfChristmasTest(unittest.TestCase):
         with self.assertRaisesWithMessage(ValueError):
             self.song.showLinesFromTo(-8, 2)
 
-    @unittest.skip("not implemented")
     def testDisallowSecondLineBiggerThan12(self):
         with self.assertRaisesWithMessage(ValueError):
             self.song.showLinesFromTo(5, 21)
