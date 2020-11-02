@@ -21,30 +21,7 @@ class TheTwelveDaysOfChristmas:
         return result
 
     def showOneLine(self, line):
-        if line == 1:
-            return self.lyrics.split('.')[0] + '.'
-        elif line == 2:
-            return self.lyrics.split('.')[1] + '.'
-        elif line == 3:
-            return self.lyrics.split('.')[2] + '.'
-        elif line == 4:
-            return self.lyrics.split('.')[3] + '.'
-        elif line == 5:
-            return self.lyrics.split('.')[4] + '.'
-        elif line == 6:
-            return self.lyrics.split('.')[5] + '.'
-        elif line == 7:
-            return self.lyrics.split('.')[6] + '.'
-        elif line == 8:
-            return self.lyrics.split('.')[7] + '.'
-        elif line == 9:
-            return self.lyrics.split('.')[8] + '.'
-        elif line == 10:
-            return self.lyrics.split('.')[9] + '.'
-        elif line == 11:
-            return self.lyrics.split('.')[10] + '.'
-        elif line == 12:
-            return self.lyrics.split('.')[11] + '.'
+        return self.lyrics.split('.')[line - 1] + '.'
 
     def showLinesFromTo(self, start, end):
         return []
