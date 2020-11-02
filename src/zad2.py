@@ -13,3 +13,5 @@ class RomanNumerals:
     def roman(self, num):
         if num == 1:
             return self.base[1]
+        elif num == 2:
+            return self.base[1]+self.base[1]
