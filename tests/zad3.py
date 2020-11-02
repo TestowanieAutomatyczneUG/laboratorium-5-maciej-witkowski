@@ -104,7 +104,6 @@ class TheTwelveDaysOfChristmasTest(unittest.TestCase):
         with self.assertRaisesWithMessage(ValueError):
             self.song.showOneLine("8")
 
-    @unittest.skip("not implemented")
     def testLineBiggerThan12(self):
         with self.assertRaisesWithMessage(ValueError):
             self.song.showOneLine(15)
