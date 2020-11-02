@@ -3,7 +3,6 @@ from src.zad3 import TheTwelveDaysOfChristmas
 
 
 class TheTwelveDaysOfChristmasTest(unittest.TestCase):
-    @unittest.skip("not implemented")
     def testShowAll(self):
         self.assertEqual(self.song.showAll(), [
             'On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.\n',
