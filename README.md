@@ -1,2 +1,2 @@
 # Laboratorium nr.5 - Maciej Witkowski
-![Python package](https://github.com/TestowanieAutomatyczneUG/laboratorium-5-melkorw/workflows/Python%20package/badge.svg?branch=master)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/TestowanieAutomatyczneUG/laboratorium-5-maciej-witkowski/Python%20package?style=plastic)
